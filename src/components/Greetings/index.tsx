@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 export const Greetings: React.FC = () => (
   <Container>
-    <Typography as="heading1">NextJS Starter Template</Typography>
+    <Typography as="heading1">NextJS Starter Template!!</Typography>
     <div>
       <Image
         src="/react.png"
