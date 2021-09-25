@@ -68,7 +68,7 @@ Este projeto está sobre a licença MIT.
 
 ---
 
-<a href="https://glerme.dev">
+<a href="https://glerme.dev" target="_blank">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/Glerme" width="100px;" alt="Perfil"/>
  <br />
  <sub><b>Guilherme Felipe</b></sub></a>
