@@ -32,7 +32,7 @@ Esse template foi feito com NextJS, Typescript, EsLint, Prettier, Docker e Husky
 
 ```bash
 # Install dependencies
-$ yarn install
+$ yarn
 
 # Run the project in development mode
 $ yarn dev
