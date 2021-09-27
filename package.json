@@ -32,8 +32,10 @@
     "typescript": "^4.3.5"
   },
   "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
     "*.{ts,tsx,js,json,jsx}": [
-      "eslint",
       "prettier --check"
     ]
   }
