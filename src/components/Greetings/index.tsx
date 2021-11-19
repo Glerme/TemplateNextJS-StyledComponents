@@ -6,6 +6,7 @@ import { Container } from './styles';
 export const Greetings: React.FC = () => (
   <Container>
     <Typography as="heading1">NextJS Starter Template!!</Typography>
+
     <div>
       <Image
         src="/react.png"
@@ -15,6 +16,7 @@ export const Greetings: React.FC = () => (
         title="React"
       />
     </div>
+
     <Typography as="body2">
       An NextJS template including Typescript, Styled-components and ESLint.
     </Typography>

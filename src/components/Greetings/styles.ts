@@ -20,9 +20,14 @@ const animation = keyframes`
 `;
 
 export const Container = styled.div`
+  display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 1rem;
+
+  padding: 1rem;
+
   width: 100%;
 
   div {
@@ -31,5 +36,9 @@ export const Container = styled.div`
     -ms-animation: ${animation} 8s linear infinite;
     -o-animation: ${animation} 8s linear infinite;
     animation: ${animation} 8s linear infinite;
+  }
+
+  h1 {
+    text-align: center;
   }
 `;

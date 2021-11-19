@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 
 import { Greetings } from '../components/Greetings';
 
@@ -7,3 +7,11 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  console.log(process.env.APP_URL);
+
+  return {
+    props: {},
+  };
+};

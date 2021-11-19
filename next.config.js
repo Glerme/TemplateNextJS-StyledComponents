@@ -1,13 +1,9 @@
-const withPlugins = require('next-compose-plugins');
+/** @type {import('next').NextConfig} */
 
 console.info(`API_URL=${process.env.API_URL}`);
+console.info(`APP_URL=${process.env.APP_URL}`);
 console.info(`APP_VERSION=${process.env.npm_package_version}`);
 
-const nextConfig = {
-  env: {
-    API_URL: process.env.API_URL,
-    APP_VERSION: process.env.npm_package_version,
-  },
+module.exports = {
+  reactStrictMode: true,
 };
-
-module.exports = withPlugins([], nextConfig);

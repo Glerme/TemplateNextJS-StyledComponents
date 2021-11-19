@@ -3,13 +3,14 @@ import { NextPage } from 'next';
 import { useCallback, useEffect, useState } from 'react';
 import { AppProps } from 'next/dist/shared/lib/router/router';
 
-import { AppTheme } from '../types/utils/colors';
+import { AppTheme } from 'types/utils/colors';
 
-import { Layout } from '../components/Layout';
+import { DefaultLayout } from 'layouts/DefaultLayout';
 
-import theme from '../styles/theme';
-import GlobalStyles from '../styles/global';
+import { theme } from 'styles/theme';
+import GlobalStyles from 'styles/global';
 import { ThemeProvider } from 'styled-components';
+import { ErrorBoundary } from 'components/ErrorBoundary';
 
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   const [appTheme, setAppTheme] = useState<AppTheme>('light');
@@ -30,7 +31,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
   }, [appTheme]);
 
   return (
-    <ThemeProvider theme={theme.colors[appTheme]}>
+    <ThemeProvider theme={theme[appTheme]}>
       <GlobalStyles />
 
       <Head>
@@ -39,9 +40,11 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => {
         <title>NextJS Starter</title>
       </Head>
 
-      <Layout appTheme={appTheme} toggleAppTheme={toggleAppTheme}>
-        <Component {...pageProps} />
-      </Layout>
+      <DefaultLayout appTheme={appTheme} toggleAppTheme={toggleAppTheme}>
+        <ErrorBoundary>
+          <Component {...pageProps} />
+        </ErrorBoundary>
+      </DefaultLayout>
     </ThemeProvider>
   );
 };

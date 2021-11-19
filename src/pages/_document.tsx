@@ -39,6 +39,9 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="UTF-8" />
           <meta name="description" content="NextJS Start Project" />
+          <meta property="og:type" content="website" />
+          <meta property="og:locale" content="pt_BR" />
+          <meta property="og:site_name" content="NextJS Start Project" />
 
           <link
             rel="shortcut icon"

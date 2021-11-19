@@ -1,7 +1,8 @@
 # next.js build output
 .next
 # Environment variables file
-.env*.local
+.env
+.env.local
 # Dependency directories
 node_modules/
 # Logs

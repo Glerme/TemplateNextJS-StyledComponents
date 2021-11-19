@@ -2,12 +2,12 @@ import { AppTheme } from '../../types/utils/colors';
 
 import { LayoutContainer } from './styles';
 
-interface LayoutProps {
+interface DefaultLayoutProps {
   appTheme: AppTheme;
   toggleAppTheme: () => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({
+export const DefaultLayout: React.FC<DefaultLayoutProps> = ({
   children,
   appTheme,
   toggleAppTheme,

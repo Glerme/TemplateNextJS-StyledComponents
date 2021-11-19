@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const LayoutContainer = styled.div`
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+
+  padding: 1rem;
 
   button {
     background: ${({ theme }) => theme.white};

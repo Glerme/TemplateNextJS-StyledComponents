@@ -1,9 +1,4 @@
-import facepaint from 'facepaint';
 import { createGlobalStyle } from 'styled-components';
-
-import theme from './theme';
-
-const mq = facepaint(theme.breakpoints);
 
 const GlobalStyles = createGlobalStyle`
  * {
@@ -14,7 +9,18 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: 16px;
-    ${mq({ 'font-size': ['87.5%', '93.75%', '100%'] })}
+    
+    @media screen and (min-width: 320px) {
+      html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+      }
+    }
+    
+    @media screen and (min-width: 1000px) {
+      html {
+        font-size: 22px;
+      }
+    }
   }
 
 
@@ -49,9 +55,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  div {
-    display: flex;
-  }
+
  
 `;
 

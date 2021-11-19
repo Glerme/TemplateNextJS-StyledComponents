@@ -6,3 +6,5 @@ node_modules
 /*.js
 # package files
 package.json
+# public files
+public/
