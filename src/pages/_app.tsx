@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
+import { AppProps } from 'next/app';
 import { useCallback, useEffect, useState } from 'react';
-import { AppProps } from 'next/dist/shared/lib/router/router';
 
 import { AppTheme } from 'types/utils/colors';
 
